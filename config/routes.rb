@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # Routes for the Like resource:
 
   get("/", { :controller => "application", :action => "index" }) 
+  get("/users", { :controller => "application", :action => "index" }) 
 
 
   # CREATE
