@@ -4,10 +4,16 @@
 #
 #  id              :integer          not null, primary key
 #  email           :string
+#  likes_count     :integer
 #  password_digest :string
+#  private         :boolean
+#  username        :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
+
+
+
 class User < ApplicationRecord
   validates :email, :uniqueness => { :case_sensitive => false }
   validates :email, :presence => true
@@ -23,4 +29,3 @@ has_many  :receivedfollowrequests, { :class_name => "FollowRequest", :foreign_ke
 
 has_many  :sentfollowrequests, { :class_name => "FollowRequest", :foreign_key => "sender_id", :dependent => :destroy }
 end
-
