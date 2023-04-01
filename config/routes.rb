@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "application", :action => "index" }) 
   get("/users", { :controller => "application", :action => "index" }) 
-
+  
 
   # CREATE
   post("/insert_like", { :controller => "likes", :action => "create" })

@@ -36,15 +36,15 @@
       <dt>
         Image
       </dt>
-      <dd>
-        <%= @the_photo.image %>
-      </dd>
+        <dd>
+          <img src="<%= @the_photo.image %>">
+        </dd>
 
       <dt>
         Owner
       </dt>
       <dd>
-        <%= @the_photo.owner_id %>
+        <%= @the_photo.owner.username %>
       </dd>
 
       <dt>
