@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get("/", { :controller => "application", :action => "index" }) 
   get("/users", { :controller => "application", :action => "index" }) 
   get("/users/:path_username", { :controller => "application", :action => "show" })
+  get("/users/:path_username/liked_photos", { :controller => "application", :action => "liked_photos" })
+  get("/users/:path_username/feed", { :controller => "application", :action => "feed" })
+  get("/users/:path_username/discover", { :controller => "application", :action => "discover" })
   
 
   # CREATE

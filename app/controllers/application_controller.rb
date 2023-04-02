@@ -35,7 +35,21 @@ class ApplicationController < ActionController::Base
     else
     render({ :template => "users/show.html.erb" })
     end
+
+    def liked_photos
+      @photos = @current_user.photos
+      render({ :template => "users/liked_photos.html.erb" })
+    end
+  
+    def feed
+      render({ :template => "users/feed.html.erb" })
+    end
+  
+    def discover
+      render({ :template => "users/discover.html.erb" })
+    end
   end
+
  
   
   # Uncomment line 5 in this file and line 3 in UserAuthenticationController if you want to force users to sign in before any other actions.
